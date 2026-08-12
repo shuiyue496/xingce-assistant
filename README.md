@@ -1,29 +1,29 @@
-# 行测速算 (Xingce Speed Math Trainer)
+# 行测小助手
 
-A local-only speed-math trainer for civil-service exam (行测) mental calculation practice. No accounts, no network, no ads — all questions are generated on-device.
+本地离线版行测速算练习应用：所有题目均在手机端程序生成，无题库、无网络、无广告、无账号。项目源于网友红领巾开发的行测小助手微信小程序——微信过于臃肿导致旧手机卡顿，于是用 Flutter 重写了一个轻量化的本地安卓应用。
 
-## Features
+## 功能
 
-- **基础计算练习 (Basic Arithmetic)** — 15 drill types: two/three-digit add-sub, make-to-100/1000, multi-add, mixed add-sub, multiplication (incl. ×11, ×15), division with ±3% estimation tolerance, multiplication estimation with ±5% tolerance.
-- **资料分析专项 (Data Analysis)** — 10 drills modeled on real statistics-bureau data: base-period estimation, growth estimation, increment/base comparison (greater/less), average annual growth rate with bar chart, fraction-to-decimal (±2%), base-period ratio, close-fraction comparison, average annual value.
-- **数字推理训练 (Number Sequences)** — 10 sequence families (arithmetic/geometric, multi-level, powers, recurrence, factorization, fractions, mechanical split, multi-interleaved, 3×3 grids, periodic), 4-option multiple choice.
-- **练习记录 (History)** — every session saved with per-question details, grouped by day, overall stats, delete individual records.
-- Custom draggable numeric keypad with per-question timer and brief right/wrong feedback.
+- **基础计算练习**：15 种速算题型（两位数/三位数加减、凑整百、多数相加、混合加减、乘法（含 ×11、×15）、除法估算 ±3%、乘法估算 ±5%）
+- **资料分析专项**：10 种专项训练，数据模拟统计局风格——估算前期量、估算增长量、增量/基期比大小（大于/小于）、年均增长率（柱状图）、分数转小数（±2%）、基期比重、接近分数比大小、年平均量
+- **数字推理训练**：10 类数列题型（等差/等比、多级、幂次、递推、因数分解、分数数列、机械划分、多重数列、九宫格、周期数列），四选一选择题
+- **练习记录**：每次练习完整保存（含每题详情），按日分组，总体统计，可单条删除
+- 自定义可拖拽数字键盘、每题独立计时、答完即时对错反馈
 
-## Tech
+## 技术栈
 
-Flutter (Dart), SQLite via sqflite, Material 3. Android only (arm64).
+Flutter (Dart) + SQLite (sqflite) + Material 3，仅安卓（arm64-v8a）。
 
-## Build
+## 构建
 
 ```sh
 flutter build apk --release --target-platform android-arm64
 ```
 
-APK output: `build/app/outputs/flutter-apk/app-release.apk`
+APK 输出：`build/app/outputs/flutter-apk/app-release.apk`
 
-## Notes
+## 说明
 
-- All questions are procedurally generated — no question bank, no copyright issues.
-- Data is stored locally in the app's private directory (SQLite); uninstalling the app removes it.
-- Released under the MIT License.
+- 所有题目均为程序化生成，不依赖题库，无版权问题
+- 数据存储在应用私有目录（SQLite），卸载应用即清除
+- 以 MIT 协议开源

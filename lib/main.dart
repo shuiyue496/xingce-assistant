@@ -14,7 +14,7 @@ class XingceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '行测小助手·本地版',
+      title: '行测小助手',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       home: const HomeScreen(),
